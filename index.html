@@ -2,6 +2,7 @@
 <html>
 <head>
     <title>nsmbw-red-mushroom-house-solver</title>
+    <
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -101,58 +102,23 @@
         <p>Created by <a href="https://github.com/Poellebob">Poellebob</a></p>
     </footer>
     <script>
-        const safeSpaces = {
-            0: [
-                [0, 0, 0, 0, 0, 0],
-                [0, 0, 0, 0, 0, 0],
-                [0, 0, 0, 0, 0, 0]
-            ],
-            1: [
-                [0, 0, 0, 0, 0, 0],
-                [1, 0, 1, 0, 0, 0],
-                [1, 0, 0, 0, 0, 0]
-            ],
-            2: [
-                [0, 1, 0, 1, 0, 0],
-                [0, 0, 0, 0, 0, 0],
-                [0, 0, 0, 0, 0, 0]
-            ],
-            3: [
-                [0, 0, 0, 0, 0, 0],
-                [0, 0, 1, 0, 0, 0],
-                [1, 0, 0, 1, 0, 0]
-            ],
-            4: [
-                [0, 1, 0, 0, 0, 1],
-                [0, 0, 0, 0, 1, 0],
-                [0, 0, 0, 0, 0, 0]
-            ],
-            5: [
-                [0, 0, 0, 0, 0, 0],
-                [0, 0, 0, 0, 0, 0],
-                [0, 0, 0, 1, 1, 0]
-            ],
-            6: [
-                [0, 0, 1, 0, 0, 0],
-                [0, 0, 0, 0, 0, 1],
-                [0, 1, 0, 0, 0, 0]
-            ],
-            7: [
-                [0, 0, 0, 0, 1, 1],
-                [0, 0, 0, 0, 0, 0],
-                [0, 0, 0, 0, 0, 1]
-            ],
-            8: [
-                [0, 0, 0, 0, 1, 1],
-                [0, 0, 0, 0, 0, 0],
-                [0, 0, 0, 1, 0, 0]
-            ],
-            9: [
-                [0, 0, 1, 0, 0, 1],
-                [0, 0, 0, 0, 0, 1],
-                [0, 0, 0, 0, 0, 1]
-            ]
-        };
+
+        let safeSpaces;
+        let Maps;
+
+        document.addEventListener('DOMContentLoaded', () => {
+            fetch('data.json')
+                .then(response => response.json())
+                .then(data => {
+                    console.log(data);
+                    Maps = data["maps"];
+                    safeSpaces = data["safeSpace"];
+                })
+                .catch(error => {
+                    console.error('Error fetching JSON file:', error);
+                });
+        });
+        
         document.getElementById("World").addEventListener("change", function() {
             const puzzleContainer = document.getElementById("Puzzle");
             puzzleContainer.innerHTML = "";
@@ -188,11 +154,11 @@
                                 this.value = "mm";
                             } else if (this.value === "mm") {
                                 this.innerHTML = '<img src="sprites/penguin.png"  width="90%">';
-                                this.value = "ps";
-                            } else if (this.value === "ps") {
+                                this.value = "sm";
+                            } else if (this.value === "sm") {
                                 this.innerHTML = '<img src="sprites/propeller.png"  width="90%">';
-                                this.value = "pm";
-                            } else if (this.value === "pm") {
+                                this.value = "pc";
+                            } else if (this.value === "pc") {
                                 this.innerHTML = '<img src="sprites/star.png"  width="90%">';
                                 this.value = "sp";
                             }else if (this.value === "sp") {
