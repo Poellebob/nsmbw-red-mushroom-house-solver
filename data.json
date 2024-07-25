@@ -1,4 +1,17 @@
 {
+    "spw":
+    {
+        "0": 0,
+        "1": 3,
+        "2": 2,
+        "3": 3,
+        "4": 3,
+        "5": 2,
+        "6": 3,
+        "7": 3,
+        "8": 3,
+        "9": 4
+    },
     "safeSpaces" : {
         "0": [
             [0, 0, 0, 0, 0, 0],
@@ -53,289 +66,289 @@
     },
     "maps":
     {
-        "world1": {
-            "mapA": [
+        "1": {
+            "A": [
                 ["IF", "PC", "FF", "SM", "B", "Jr"],
                 ["SM", "IF", "PC", "B", "IF", "PC"],
                 ["FF", "Jr", "IF", "PC", "FF", "FF"]
             ],
-            "mapB": [
+            "B": [
                 ["Jr", "IF", "FF", "FF", "PC", "PC"],
                 ["FF", "B", "PC", "SM", "IF", "Jr"],
                 ["IF", "PC", "SM", "B", "FF", "IF"]
             ],
-            "mapC": [
+            "C": [
                 ["Jr", "PC", "FF", "SM", "ST", "PC"],
                 ["SM", "IF", "FF", "B", "IF", "ST"],
                 ["FF", "Jr", "IF", "B", "FF", "IF"]
             ],
-            "mapD": [
+            "D": [
                 ["PC", "PC", "IF", "FF", "B", "PC"],
                 ["FF", "B", "FF", "SM", "IF", "Jr"],
                 ["IF", "Jr", "SM", "PC", "FF", "IF"]
             ],
-            "mapE": [
+            "E": [
                 ["IF", "IF", "FF", "FF", "PC", "Jr"],
                 ["SM", "B", "FF", "B", "FF", "ST"],
                 ["IF", "ST", "SM", "PC", "Jr", "IF"]
             ],
-            "mapF": [
+            "F": [
                 ["PC", "IF", "IF", "SM", "B", "PC"],
                 ["FF", "IF", "PC", "SM", "FF", "Jr"],
                 ["FF", "PC", "IF", "B", "Jr", "FF"]
             ]
         },
-        "world2": {
-            "mapA": [
+        "2": {
+            "A": [
                 ["MM", "PC", "PC", "MM", "ST", "PC"],
                 ["ST", "FF", "B", "IF", "MM", "Jr"],
                 ["MM", "B", "FF", "Jr", "IF", "PC"]
             ],
-            "mapB": [
+            "B": [
                 ["PC", "MM", "PC", "MM", "Jr", "PC"],
                 ["B", "FF", "PC", "IF", "MM", "Jr"],
                 ["IF", "FF", "FF", "MM", "B", "FF"]
             ],
-            "mapC": [
+            "C": [
                 ["Jr", "PC", "FF", "FF", "PC", "PC"],
                 ["MM", "IF", "PC", "IF", "MM", "MM"],
                 ["MM", "B", "FF", "Jr", "B", "FF"]
             ],
-            "mapD": [
+            "D": [
                 ["Jr", "MM", "FF", "FF", "PC", "B"],
                 ["MM", "IF", "B", "IF", "Jr", "MM"],
                 ["IF", "PC", "PC", "MM", "IF", "PC"]
             ],
-            "mapE": [
+            "E": [
                 ["MM", "PC", "B", "IF", "ST", "PC"],
                 ["B", "IF", "PC", "MM", "Jr", "Jr"],
                 ["MM", "ST", "FF", "MM", "PC", "FF"]
             ],
-            "mapF": [
+            "F": [
                 ["PC", "MM", "B", "IF", "Jr", "B"],
                 ["MM", "FF", "PC", "IF", "MM", "MM"],
                 ["IF", "PC", "PC", "Jr", "IF", "FF"]
             ]
         },
-        "world3": {
-            "mapA": [
+        "3": {
+            "A": [
                 ["Jr", "B", "B", "MM", "ST", "PS"],
                 ["FF", "PS", "PS", "IF", "Jr", "MM"],
                 ["IF", "PS", "PC", "PC", "ST", "FF"]
             ],
-            "mapB": [
+            "B": [
                 ["IF", "MM", "B", "PS", "MM", "PS"],
                 ["FF", "MM", "MM", "FF", "PS", "B"],
                 ["PS", "Jr", "FF", "FF", "Jr", "IF"]
             ],
-            "mapC": [
+            "C": [
                 ["ST", "B", "PS", "PC", "Jr", "PS"],
                 ["MM", "MM", "PS", "FF", "Jr", "B"],
                 ["IF", "PS", "PC", "FF", "ST", "IF"]
             ],
-            "mapD": [
+            "D": [
                 ["IF", "MM", "PS", "PS", "MM", "IF"],
                 ["IF", "B", "MM", "FF", "Jr", "B"],
                 ["PS", "PS", "FF", "MM", "Jr", "IF"]
             ],
-            "mapE": [
+            "E": [
                 ["Jr", "B", "B", "MM", "MM", "PS"],
                 ["FF", "PS", "MM", "FF", "PS", "MM"],
                 ["IF", "Jr", "FF", "FF", "PS", "IF"]
             ],
-            "mapF": [
+            "F": [
                 ["IF", "MM", "B", "MM", "Jr", "IF"],
                 ["IF", "MM", "PS", "IF", "PS", "B"],
                 ["PS", "Jr", "FF", "MM", "PS", "FF"]
             ]
         },
-        "world4": {
-            "mapA": [
+        "4": {
+            "A": [
                 ["B", "PC", "FF", "PC", "Jr", "PS"],
                 ["PC", "Jr", "IF", "MM", "PC", "IF"],
                 ["B", "MM", "FF", "ST", "PS", "ST"]
             ],
-            "mapB": [
+            "B": [
                 ["Jr", "PS", "PS", "PC", "Jr", "PS"],
                 ["MM", "FF", "MM", "MM", "IF", "IF"],
                 ["B", "B", "PC", "FF", "MM", "PS"]
             ],
-            "mapC": [
+            "C": [
                 ["PS", "PC", "FF", "FF", "MM", "PS"],
                 ["MM", "Jr", "MM", "B", "IF", "Jr"],
                 ["PS", "MM", "PC", "IF", "PS", "B"]
             ],
-            "mapD": [
+            "D": [
                 ["B", "PS", "FF", "PC", "MM", "PS"],
                 ["MM", "Jr", "IF", "B", "PC", "Jr"],
                 ["PS", "MM", "IF", "FF", "MM", "PS"]
             ],
-            "mapE": [
+            "E": [
                 ["Jr", "PC", "PS", "PC", "ST", "PC"],
                 ["PC", "FF", "MM", "B", "IF", "IF"],
                 ["PS", "B", "FF", "Jr", "MM", "ST"]
             ],
-            "mapF": [
+            "F": [
                 ["PS", "PS", "PS", "FF", "Jr", "PC"],
                 ["MM", "FF", "MM", "MM", "PC", "IF"],
                 ["PS", "B", "IF", "Jr", "MM", "B"]
             ]
         },
-        "world5": {
-            "mapA": [
+        "5": {
+            "A": [
                 ["IF", "PS", "FF", "IF", "ST", "IF"],
                 ["PC", "B", "Jr", "ST", "B", "Jr"],
                 ["IF", "PS", "PC", "FF", "MM", "MM"]
             ],
-            "mapB": [
+            "B": [
                 ["IF", "PC", "FF", "MM", "B", "IF"],
                 ["IF", "B", "Jr", "PS", "FF", "PC"],
                 ["FF", "PS", "Jr", "IF", "MM", "FF"]
             ],
-            "mapC": [
+            "C": [
                 ["IF", "MM", "FF", "MM", "PS", "PC"],
                 ["IF", "B", "IF", "PS", "FF", "Jr"],
                 ["FF", "B", "Jr", "PC", "IF", "FF"]
             ],
-            "mapD": [
+            "D": [
                 ["B", "MM", "FF", "IF", "PS", "PC"],
                 ["PC", "PC", "IF", "Jr", "B", "Jr"],
                 ["IF", "PS", "PC", "FF", "IF", "MM"]
             ],
-            "mapE": [
+            "E": [
                 ["B", "MM", "Jr", "IF", "PS", "PC"],
                 ["IF", "ST", "IF", "ST", "FF", "Jr"],
                 ["IF", "B", "MM", "PC", "PS", "FF"]
             ],
-            "mapF": [
+            "F": [
                 ["B", "PC", "Jr", "MM", "B", "PC"],
                 ["IF", "PC", "IF", "Jr", "FF", "PC"],
                 ["FF", "ST", "PS", "MM", "PS", "IF"]
             ]
         },
-        "world6": {
-            "mapA": [
+        "6": {
+            "A": [
                 ["B", "Jr", "MM", "ST", "PS", "FF"],
                 ["MM", "Jr", "PC", "MM", "FF", "IF"],
                 ["FF", "IF", "IF", "PC", "PS", "IF"]
             ],
-            "mapB": [
+            "B": [
                 ["PS", "MM", "IF", "Jr", "MM", "IF"],
                 ["FF", "IF", "PS", "B", "Jr", "PC"],
                 ["FF", "PC", "B", "ST", "MM", "PS"]
             ],
-            "mapC": [
+            "C": [
                 ["Jr", "PS", "MM", "ST", "PS", "IF"],
                 ["MM", "Jr", "PC", "MM", "B", "FF"],
                 ["IF", "IF", "FF", "PC", "PS", "FF"]
             ],
-            "mapD": [
+            "D": [
                 ["Jr", "MM", "IF", "PC", "B", "IF"],
                 ["FF", "IF", "PS", "PC", "MM", "ST"],
                 ["FF", "Jr", "B", "MM", "PS", "PS"]
             ],
-            "mapE": [
+            "E": [
                 ["IF", "PS", "FF", "ST", "Jr", "PC"],
                 ["MM", "PS", "IF", "Jr", "B", "MM"],
                 ["IF", "Jr", "PS", "PC", "PS", "FF"]
             ],
-            "mapF": [
+            "F": [
                 ["PS", "Jr", "IF", "Jr", "MM", "PC"],
                 ["FF", "MM", "PC", "ST", "B", "PS"],
                 ["IF", "MM", "PS", "PS", "FF", "IF"]
             ]
         },
-        "world7": {
-            "mapA": [
+        "7": {
+            "A": [
                 ["PC", "FF", "ST", "MM", "IF", "Jr"],
                 ["PC", "B", "Jr", "FF", "B", "IF"],
                 ["FF", "IF", "MM", "ST", "PS", "PC"]
             ],
-            "mapB": [
+            "B": [
                 ["IF", "Jr", "MM", "PS", "B", "IF"],
                 ["FF", "B", "PC", "IF", "FF", "MM"],
                 ["FF", "PC", "Jr", "ST", "PS", "IF"]
             ],
-            "mapC": [
+            "C": [
                 ["PC", "Jr", "IF", "PS", "MM", "ST"],
                 ["FF", "PC", "B", "IF", "MM", "PS"],
                 ["Jr", "FF", "PC", "ST", "IF", "FF"]
             ],
-            "mapD": [
+            "D": [
                 ["Jr", "FF", "PC", "B", "IF", "FF"],
                 ["PC", "MM", "FF", "Jr", "ST", "PS"],
                 ["IF", "Jr", "MM", "IF", "PS", "MM"]
             ],
-            "mapE": [
+            "E": [
                 ["PS", "PC", "IF", "ST", "PS", "FF"],
                 ["FF", "MM", "PS", "B", "IF", "PC"],
                 ["IF", "FF", "ST", "MM", "IF", "PC"]
             ],
-            "mapF": [
+            "F": [
                 ["MM", "Jr", "MM", "PC", "FF", "PS"],
                 ["FF", "Jr", "B", "PS", "PC", "ST"],
                 ["IF", "PC", "MM", "Jr", "ST", "IF"]
             ]
         },
-        "world8": {
-            "mapA": [
+        "8": {
+            "A": [
                 ["PC", "FF", "MM", "ST", "PS", "FF"],
                 ["PC", "B", "PS", "MM", "PS", "IF"],
                 ["FF", "IF", "IF", "PC", "PS", "Jr"]
             ],
-            "mapB": [
+            "B": [
                 ["IF", "MM", "IF", "B", "PS", "IF"],
                 ["FF", "IF", "MM", "PC", "Jr", "B"],
                 ["PS", "PC", "PS", "ST", "MM", "FF"]
             ],
-            "mapC": [
+            "C": [
                 ["Jr", "PS", "PC", "ST", "PS", "IF"],
                 ["MM", "Jr", "IF", "MM", "PS", "B"],
                 ["IF", "PC", "PS", "IF", "MM", "FF"]
             ],
-            "mapD": [
+            "D": [
                 ["Jr", "MM", "IF", "PC", "B", "IF"],
                 ["FF", "IF", "MM", "PC", "Jr", "ST"],
                 ["FF", "PC", "Jr", "MM", "PS", "PS"]
             ],
-            "mapE": [
+            "E": [
                 ["IF", "PS", "FF", "ST", "Jr", "PC"],
                 ["MM", "PS", "IF", "Jr", "B", "MM"],
                 ["IF", "Jr", "PS", "PC", "PS", "FF"]
             ],
-            "mapF": [
+            "F": [
                 ["PS", "Jr", "IF", "Jr", "MM", "PC"],
                 ["FF", "MM", "PC", "ST", "B", "PS"],
                 ["IF", "MM", "PS", "PS", "FF", "IF"]
             ]
         },
-        "world9": {
-            "mapA": [
+        "9": {
+            "A": [
                 ["PC", "FF", "ST", "MM", "IF", "Jr"],
                 ["PC", "B", "Jr", "FF", "B", "IF"],
                 ["FF", "IF", "MM", "ST", "PS", "PC"]
             ],
-            "mapB": [
+            "B": [
                 ["IF", "Jr", "MM", "PS", "B", "IF"],
                 ["FF", "B", "PC", "IF", "FF", "MM"],
                 ["FF", "PC", "Jr", "ST", "PS", "IF"]
             ],
-            "mapC": [
+            "C": [
                 ["PC", "Jr", "IF", "PS", "MM", "ST"],
                 ["FF", "PC", "B", "IF", "MM", "PS"],
                 ["Jr", "FF", "PC", "ST", "IF", "FF"]
             ],
-            "mapD": [
+            "D": [
                 ["Jr", "FF", "PC", "B", "IF", "FF"],
                 ["PC", "MM", "FF", "Jr", "ST", "PS"],
                 ["IF", "Jr", "MM", "IF", "PS", "MM"]
             ],
-            "mapE": [
+            "E": [
                 ["PS", "PC", "IF", "ST", "PS", "FF"],
                 ["FF", "MM", "PS", "B", "IF", "PC"],
                 ["IF", "FF", "ST", "MM", "IF", "PC"]
             ],
-            "mapF": [
+            "F": [
                 ["MM", "Jr", "MM", "PC", "FF", "PS"],
                 ["FF", "Jr", "B", "PS", "PC", "ST"],
                 ["IF", "PC", "MM", "Jr", "ST", "IF"]
