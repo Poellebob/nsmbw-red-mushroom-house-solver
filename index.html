@@ -65,7 +65,7 @@
         <p>NSMBW Red Mushroom House Solver is a tool that helps you solve the red mushroom house puzzles in New Super Mario Bros. Wii.</p>
     </header>
     <select id="World">
-        <option value=0>Select a world</option>
+        <option value=0 disabled selected hidden>Select a world</option>
         <option value=1>World 1</option>
         <option value=2>World 2</option>
         <option value=3>World 3</option>
@@ -101,8 +101,9 @@
         <p>Created by <a href="https://github.com/Poellebob">Poellebob</a></p>
     </footer>
     <script>
-        let safeSpaces;
-        let Maps;
+        let safeSpaces = [];
+        let spw = [];
+        let Maps = [];
 
         document.addEventListener('DOMContentLoaded', () => {
             fetch('data.json')
@@ -111,6 +112,7 @@
                     console.log(data);
                     Maps = data["maps"];
                     safeSpaces = data["safeSpaces"];
+                    spw = data["spw"];
                 })
                 .catch(error => {
                     console.error('Error fetching JSON file:', error);
@@ -118,17 +120,6 @@
         });
 
         document.getElementById("World").addEventListener("change", function() {
-            this.innerHTML = "\
-                <option value=1>World 1</option>;\
-                <option value=2>World 2</option>;\
-                <option value=3>World 3</option>;\
-                <option value=4>World 4</option>;\
-                <option value=5>World 5</option>;\
-                <option value=6>World 6</option>;\
-                <option value=7>World 7</option>;\
-                <option value=8>World 8</option>;\
-                <option value=9>World 9</option>;\
-            ";
             const puzzleContainer = document.getElementById("Puzzle");
             puzzleContainer.innerHTML = "";
             const world = parseInt(this.value);
@@ -178,7 +169,7 @@
                         button.style.backgroundColor = "green";
                         button.style.cursor = "pointer";
                         button.id = "grid";
-                        button.name = "safe" + safenum;
+                        button.name = String("safe" + safenum);
                         safenum++;
 
                         puzzleContainer.appendChild(button);
@@ -190,8 +181,23 @@
         document.getElementById("solve").addEventListener("click", function() {
             const puzzleContainer = document.getElementById("Puzzle");
             const puzzle = [];
+            let map = "A";
 
-            for(let i = 0; i < );
+            
+
+            for(let i = 0; i <  spw[document.getElementById("World").value].length; i++) {
+                for(let j = 0; j < 3; j++) {
+                    for(let k = 0; k < 6; k++) {
+                        if(safeSpaces[world][j][k] === 0){
+                            break;
+                        }else{
+                            
+                        }
+                    }
+                }
+
+                console.log(document.getElementsByName("safe" + i)[0].value);
+            }
         });
     </script>
 </body>
