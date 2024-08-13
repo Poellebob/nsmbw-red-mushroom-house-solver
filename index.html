@@ -118,17 +118,7 @@
         });
 
         document.getElementById("World").addEventListener("change", function() {
-            this.innerHTML = "\
-                <option value=1>World 1</option>;\
-                <option value=2>World 2</option>;\
-                <option value=3>World 3</option>;\
-                <option value=4>World 4</option>;\
-                <option value=5>World 5</option>;\
-                <option value=6>World 6</option>;\
-                <option value=7>World 7</option>;\
-                <option value=8>World 8</option>;\
-                <option value=9>World 9</option>;\
-            ";
+            
             const puzzleContainer = document.getElementById("Puzzle");
             puzzleContainer.innerHTML = "";
             const world = parseInt(this.value);
