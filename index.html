@@ -183,15 +183,18 @@
 
         document.getElementById("solve").addEventListener("click", function() {
             const puzzleContainer = document.getElementById("Puzzle");
-            const puzzle = [];
-            safenum = 0;
-            let map;
+            const world = document.getElementById("World").value;
+            const mapss = ["A", "B", "C", "D", "E", "F"];
+            let puzzle = [];
+            let check = [];
+            let safenum = 0;
+            let map = 0;
 
             for(let i = 0; i < 3; i++){
                 for(let j = 0; j < 6; j++){
-                    let world = document.getElementById("World").value;
+
                     if (safeSpaces[world][i][j] === 0) {
-                        break;
+                        continue;
                     }else{
                         puzzle[safenum] = document.getElementsByName("safe" + safenum)[0].value;
                         safenum++;
@@ -199,23 +202,29 @@
                 }
             }
             safenum = 0;
-            
-            for(let i = 0; i < 3; i++){
-                for(let j = 0; j < 6; j++){
-                    let world = document.getElementById("World").value;
-                    if (safeSpaces[world][i][j] === 0) {
-                        break;
-                    }else{
-                        for(let k = 0; k < 6; k++){
-                            if(puzzle[safenum] == Maps[world][maps[k]][i][j]){
-                                map = k;
-                            }
+            for(map = 0; map < 6; map++){
+                for(let i = 0; i < 3; i++){
+                    for(let j = 0; j < 6; j++){
+                        
+                        if (safeSpaces[world][i][j] === 0) {
+                            continue;
+                        }else{
+                            check[safenum] = [i, j];
+                            safenum++;
                         }
                     }
                 }
-            }
+                let ck_temp= [];
 
-            for (let i = 0; i < 3; i++) {
+                for(let i = 0; i < safenum; i++){
+                    ck_temp[i] = Maps[world][mapss[map]][check[i][0]][check[i][1]];
+                }
+                
+                check = ck_temp;
+                if(check == puzzle) break;
+            }
+            console.log(map);
+            /*for (let i = 0; i < 3; i++) {
                 for (let j = 0; j < 6; j++) {
                     if (safeSpaces[world][i][j] === 0) {
                         const div = document.createElement("div");
@@ -264,7 +273,7 @@
                         puzzleContainer.appendChild(button);
                     }
                 }
-            }
+            }*/
         });
         
     </script>
