@@ -59,6 +59,9 @@
             align-content: center;
             background-color: gray;
             font-size: 0%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
         }
     </style>
 </head>
@@ -121,8 +124,6 @@
                     console.error('Error fetching JSON file:', error);
                 });
         });
-
-        mapss = ["A", "B", "C", "D", "E", "F"];
 
         document.getElementById("World").addEventListener("change", function() {
             
@@ -189,7 +190,7 @@
             const puzzleContainer = document.getElementById("Puzzle");
             const world = document.getElementById("World").value;
             const mapss = ["A", "B", "C", "D", "E", "F"];
-            const sprites = {"SM" : "mush","FF" : "fire", "IF" : "ice", "MM" : "mini", "PS" : "penguin", "PC" : "propeller", "SP" : "star"};
+            const sprites = {"SM" : "mush","FF" : "fire", "IF" : "ice", "MM" : "mini", "PS" : "penguin", "PC" : "propeller", "ST" : "star", "Jr" : "jr", "B" : "bowser"};
             let puzzle = [];
             let check = [];
             let safenum = 0;
@@ -239,21 +240,27 @@
             }
             console.log("map: " + mapss[map]);
             
+            console.log(check);
             let indx_1 = 0;
             for(let i = 0; i < 3; i++){
                 for(let j = 0; j < 6; j++){
                     if(i == check[indx_1][0] && j == check[indx_1][1]){
-                        indx_1++;
+                        if(spw[world] > indx_1 + 1){
+                            indx_1++;
+                        }
+                        console.log([i, j]);
                         continue;
                     }else{
+                        console.log([i, j]);
                         var innerHTML;
                         
-                        if(world == 6){
+                        if(map == 6){
                             innerHTML = '<img src="sprites/mark.png" width="90%">';
                         }else{
-                            innerHTML = '<img src="sprites/' + sprites[spw[world][i][j]] + '.png" width="90%">';
+                            innerHTML = '<img src="sprites/' + sprites[Maps[world][mapss[map]][i][j]] + '.png" width="90%">';
+                            console.log(innerHTML + " : " + Maps[world][mapss[map]][i][j]);
                         }
-                        document.getElementsByClassName(i.toString() + j.toString()).innerHTML = innerHTML;
+                        document.getElementsByClassName(i.toString() + j.toString())[0].innerHTML = innerHTML;
                     }
                 }
             }
