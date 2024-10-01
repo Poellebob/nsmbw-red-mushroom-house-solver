@@ -35,6 +35,50 @@ footer {
     align-items: center;
     display: flex;
 }
+
+#Puzzle {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    grid-gap: 0.5em;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    margin-bottom: 80px;
+    width: 70vw;
+    height: 35vw;
+    
+}
+#grid {
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    align-content: center;
+    background-color: gray;
+    font-size: 0%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: gray;
+}
+#pair{
+
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    grid-gap: 2em;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    margin-bottom: 80px;
+    width: 70vw;
+    height: 35vw;
+    max-width: 1000px;
+    max-height: 500px;
+}
+.world {
+    text-align: center;
+}
 .button {
     border: 1px solid black;
     color: black;
@@ -46,29 +90,4 @@ footer {
     margin: 4px 2px;
     cursor: pointer;
     border-radius: 12px;
-}
-#Puzzle {
-    display: grid;
-    grid-template-columns: repeat(6, 1fr);
-    grid-template-rows: repeat(3, 1fr);
-    grid-gap: 0.5em;
-    justify-content: center;
-    align-items: center;
-    margin: auto;
-    width: 70vw;
-    height: 35vw;
-    max-width: 1000px;
-    max-height: 500px;
-    
-}
-#Puzzle #grid {
-    width: 100%;
-    height: 100%;
-    border-radius: 10px;
-    align-content: center;
-    background-color: gray;
-    font-size: 0%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
 }

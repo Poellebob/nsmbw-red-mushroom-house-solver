@@ -1,218 +1,66 @@
 <!DOCTYPE html>
 <html>
-<head>
-    <title>NSMBW Red Mushroom House Solver</title>
-    <link rel="stylesheet" type="text/css" href="style.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
-</head>
-<body>
-    <header>
-        <h1>NSMBW Red Mushroom House Solver</h1>
-        <p>NSMBW Red Mushroom House Solver is a tool that helps you solve the red mushroom house puzzles in New Super Mario Bros. Wii.</p>
-    </header>
-    <select id="World">
-        <option value=0>Select a world</option>
-        <option value=1>World 1</option>
-        <option value=2>World 2</option>
-        <option value=3>World 3</option>
-        <option value=4>World 4</option>
-        <option value=5>World 5</option>
-        <option value=6>World 6</option>
-        <option value=7>World 7</option>
-        <option value=8>World 8</option>
-        <option value=9>World 9</option>
-    </select>
-    <div id="Puzzle">
-        <div id="grid" style="background-color: gray;"></div>
-        <div id="grid" style="background-color: gray;"></div>
-        <div id="grid" style="background-color: gray;"></div>
-        <div id="grid" style="background-color: gray;"></div>
-        <div id="grid" style="background-color: gray;"></div>
-        <div id="grid" style="background-color: gray;"></div>
-        <div id="grid" style="background-color: gray;"></div>
-        <div id="grid" style="background-color: gray;"></div>
-        <div id="grid" style="background-color: gray;"></div>
-        <div id="grid" style="background-color: gray;"></div>
-        <div id="grid" style="background-color: gray;"></div>
-        <div id="grid" style="background-color: gray;"></div>
-        <div id="grid" style="background-color: gray;"></div>
-        <div id="grid" style="background-color: gray;"></div>
-        <div id="grid" style="background-color: gray;"></div>
-        <div id="grid" style="background-color: gray;"></div>
-        <div id="grid" style="background-color: gray;"></div>
-        <div id="grid" style="background-color: gray;"></div>
-    </div>
-    <div id="solve">
-        <button class="button">Solve</button>
-    </div>
-    <footer class="fixed-bottom">
-        <p>Created by <a href="https://github.com/Poellebob">Poellebob</a></p>
-        <p>View the source code on <a href="https://github.com/Poellebob/nsmbw-red-mushroom-house-solver">GitHub</a></p>
-    </footer>
-    <script>
-        let safeSpaces;
-        let Maps;
-        let spw;
+    <head>
+        <title>NSMBW Red Mushroom House Solver</title>
+        <link rel="stylesheet" href="css/style.css">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    </head>
 
-        document.addEventListener('DOMContentLoaded', () => {
-            fetch('data.json')
-                .then(response => response.json())
-                .then(data => {
-                    console.log(data);
-                    Maps = data["maps"];
-                    safeSpaces = data["safeSpaces"];
-                    spw = data["spw"];
-                })
-                .catch(error => {
-                    console.error('Error fetching JSON file:', error);
-                });
-        });
+    <body>
+        <header>
+            <h1>NSMBW Red Mushroom House Solver</h1>
+            <p>
+                NSMBW Red Mushroom House Solver is a tool 
+                that helps you solve the red mushroom house puzzles in 
+                New Super Mario Bros. Wii. All the combinations are 
+                <a href="html/info.html">here</a>
+            </p>
+        </header>
 
-        document.getElementById("World").addEventListener("change", function() {
-            
-            const puzzleContainer = document.getElementById("Puzzle");
-            puzzleContainer.innerHTML = "";
-            const world = parseInt(this.value);
+        <select id="World">
+            <option value=0>Select a world</option>
+            <option value=1>World 1</option>
+            <option value=2>World 2</option>
+            <option value=3>World 3</option>
+            <option value=4>World 4</option>
+            <option value=5>World 5</option>
+            <option value=6>World 6</option>
+            <option value=7>World 7</option>
+            <option value=8>World 8</option>
+            <option value=9>World 9</option>
+        </select>
 
-            let safenum = 0;
+        <div id="Puzzle">
+            <div id="grid"></div>
+            <div id="grid"></div>
+            <div id="grid"></div>
+            <div id="grid"></div>
+            <div id="grid"></div>
+            <div id="grid"></div>
+            <div id="grid"></div>
+            <div id="grid"></div>
+            <div id="grid"></div>
+            <div id="grid"></div>
+            <div id="grid"></div>
+            <div id="grid"></div>
+            <div id="grid"></div>
+            <div id="grid"></div>
+            <div id="grid"></div>
+            <div id="grid"></div>
+            <div id="grid"></div>
+            <div id="grid"></div>
+        </div>
 
-            for (let i = 0; i < 3; i++) {
-                for (let j = 0; j < 6; j++) {
-                    if (safeSpaces[world][i][j] === 0) {
-                        const div = document.createElement("div");
-                        div.style.backgroundColor = "gray";
-                        div.id = "grid";
-                        div.className = `${i}${j}`;
+        <div id="solve">
+            <button class="button">Solve</button>
+        </div>
 
-                        puzzleContainer.appendChild(div);
-                    } else {
-                        const button = document.createElement("button");
-                        button.innerHTML = '<img src="sprites/mark.png" width="90%">';
-                        button.value = "mark";
+        <footer class="fixed-bottom">
+            <p>Created by <a href="https://github.com/Poellebob">Poellebob</a></p>
+            <p>View the source code on <a href="https://github.com/Poellebob/nsmbw-red-mushroom-house-solver">GitHub</a></p>
+        </footer>
 
-                        button.addEventListener("click", function() {
-                            if (this.value === "mark") {
-                                this.innerHTML = '<img src="sprites/mush.png" width="90%">';
-                                this.value = "SM";
-                            } else if (this.value === "SM") {
-                                this.innerHTML = '<img src="sprites/fire.png" width="90%">';
-                                this.value = "FF";
-                            } else if (this.value === "FF") {
-                                this.innerHTML = '<img src="sprites/ice.png" width="90%">';
-                                this.value = "IF";
-                            } else if (this.value === "IF") {
-                                this.innerHTML = '<img src="sprites/mini.png" width="90%">';
-                                this.value = "MM";
-                            } else if (this.value === "MM") {
-                                this.innerHTML = '<img src="sprites/penguin.png" width="90%">';
-                                this.value = "PS";
-                            } else if (this.value === "PS") {
-                                this.innerHTML = '<img src="sprites/propeller.png" width="90%">';
-                                this.value = "PC";
-                            } else if (this.value === "PC") {
-                                this.innerHTML = '<img src="sprites/star.png" width="90%">';
-                                this.value = "ST";
-                            } else if (this.value === "ST") {
-                                this.innerHTML = '<img src="sprites/jr.png" width="90%">';
-                                this.value = "Jr";
-                            } else if (this.value="Jr"){
-                                this.innerHTML = '<img src="sprites/mush.png" width="90%">';
-                                this.value = "SM";
-                            }
-                        });
-                        button.style.backgroundColor = "green";
-                        button.style.cursor = "pointer";
-                        button.id = "grid";
-                        button.name = "safe" + safenum;
-                        safenum++;
-
-                        puzzleContainer.appendChild(button);
-                    }
-                }
-            }
-        });
-
-        document.getElementById("solve").addEventListener("click", function() {
-            const puzzleContainer = document.getElementById("Puzzle");
-            const world = document.getElementById("World").value;
-            const mapss = ["A", "B", "C", "D", "E", "F"];
-            const sprites = {"SM" : "mush","FF" : "fire", "IF" : "ice", "MM" : "mini", "PS" : "penguin", "PC" : "propeller", "ST" : "star", "Jr" : "jr", "B" : "bowser"};
-            let puzzle = [];
-            let check = [];
-            let safenum = 0;
-            let map = 0;
-
-            for(let i = 0; i < 3; i++){
-                for(let j = 0; j < 6; j++){
-
-                    if (safeSpaces[world][i][j] === 0) {
-                        continue;
-                    }else{
-                        puzzle[safenum] = document.getElementsByName("safe" + safenum)[0].value;
-                        safenum++;
-                    } 
-                }
-            }
-            
-            let indx = 0;
-            for(let i = 0; i < 3; i++){
-                for(let j = 0; j < 6; j++){
-                    
-                    if (safeSpaces[world][i][j] === 0) {
-                        continue;
-                    }else{
-                        check[indx] = [i, j];
-                        indx++;
-                    }
-                }
-            }
-
-            for(map = 0; map < 6; map++){
-                let ck_temp= [];
-                let found = true;
-
-                for(let i = 0; i < indx; i++){
-                    ck_temp[i] = Maps[world][mapss[map]][check[i][0]][check[i][1]];
-                }
-                
-                for(let i = 0; i < indx; i++){
-                    if(ck_temp[i] != puzzle[i]) {
-                        found = false;
-                        break;
-                    }
-                }
-
-                if(found){break;}
-            }
-            console.log("map: " + mapss[map]);
-            
-            console.log(check);
-            let indx_1 = 0;
-            for(let i = 0; i < 3; i++){
-                for(let j = 0; j < 6; j++){
-                    if(i == check[indx_1][0] && j == check[indx_1][1]){
-                        if(spw[world] > indx_1 + 1){
-                            indx_1++;
-                        }
-                        console.log([i, j]);
-                        continue;
-                    }else{
-                        console.log([i, j]);
-                        var innerHTML;
-                        
-                        if(map == 6){
-                            innerHTML = '<img src="sprites/mark.png" width="90%">';
-                        }else{
-                            innerHTML = '<img src="sprites/' + sprites[Maps[world][mapss[map]][i][j]] + '.png" width="90%">';
-                            console.log(innerHTML + " : " + Maps[world][mapss[map]][i][j]);
-                        }
-                        document.getElementsByClassName(i.toString() + j.toString())[0].innerHTML = innerHTML;
-                    }
-                }
-            }
-        });
-        
-    </script>
-</body>
+        <script type="text/javascript" src="js/calc.js"></script>
+    </body>
 </html>
