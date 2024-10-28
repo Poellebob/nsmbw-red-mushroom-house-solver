@@ -45,8 +45,8 @@ footer {
     align-items: center;
     margin: auto;
     margin-bottom: 80px;
-    width: 70vw;
-    height: 35vw;
+    width: 70vb;
+    height: 35vb;
     
 }
 #grid {
@@ -60,21 +60,6 @@ footer {
     justify-content: center;
     align-items: center;
     background-color: gray;
-}
-#pair{
-
-    display: grid;
-    grid-template-columns: repeat(6, 1fr);
-    grid-template-rows: repeat(3, 1fr);
-    grid-gap: 2em;
-    justify-content: center;
-    align-items: center;
-    margin: auto;
-    margin-bottom: 80px;
-    width: 70vw;
-    height: 35vw;
-    max-width: 1000px;
-    max-height: 500px;
 }
 .world {
     text-align: center;
