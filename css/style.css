@@ -47,6 +47,8 @@ footer {
     margin-bottom: 80px;
     width: 70vb;
     height: 35vb;
+    max-width: 95vw;
+    max-height: 45.5vw;
     
 }
 #grid {
