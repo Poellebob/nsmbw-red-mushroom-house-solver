@@ -1,6 +1,5 @@
 {
-    "spw":
-    {
+    "spw": {
         "0": 0,
         "1": 3,
         "2": 2,
@@ -12,7 +11,7 @@
         "8": 3,
         "9": 4
     },
-    "safeSpaces" : {
+    "safeSpaces": {
         "0": [
             [0, 0, 0, 0, 0, 0],
             [0, 0, 0, 0, 0, 0],
@@ -64,8 +63,7 @@
             [0, 0, 0, 0, 0, 1]
         ]
     },
-    "maps":
-    {
+    "maps": {
         "1": {
             "A": [
                 ["IF", "PC", "FF", "SM", "B", "Jr"],
@@ -226,11 +224,11 @@
                 ["FF", "ST", "PS", "MM", "PS", "IF"]
             ]
         },
-        "6": {  
+        "6": {
             "A": [
-                ["B", "ST", "IF", "PS", "B", "FF"],
+                ["B", "ST", "IF", "PC", "B", "FF"],
                 ["FF", "ST", "FF", "Jr", "Jr", "FF"],
-                ["MM", "IF", "PS", "B", "PC", "MM"]
+                ["MM", "IF", "PS", "PS", "PC", "MM"]
             ],
             "B": [
                 ["B", "Jr", "MM", "PC", "FF", "Jr"],
@@ -238,19 +236,19 @@
                 ["MM", "IF", "PS", "B", "PC", "MM"]
             ],
             "C": [
-                ["B", "Jr", "IF", "PS", "FF", "PS"],
+                ["B", "Jr", "IF", "PS", "FF", "PC"],
                 ["FF", "B", "IF", "IF", "Jr", "FF"],
-                ["MM", "FF", "PS", "IF", "PS", "MM"]
+                ["MM", "FF", "PS", "IF", "PC", "MM"]
             ],
             "D": [
-                ["PS", "FF", "MM", "PC", "PS", "FF"],
+                ["PC", "FF", "MM", "PC", "PS", "FF"],
                 ["MM", "ST", "IF", "ST", "Jr", "PS"],
-                ["IF", "FF", "B", "B", "FF", "JR"]
+                ["IF", "FF", "B", "B", "FF", "Jr"]
             ],
             "E": [
-                ["PS", "FF", "MM", "PS", "B", "PC"],
+                ["PC", "FF", "MM", "PS", "B", "PC"],
                 ["MM", "FF", "IF", "IF", "Jr", "FF"],
-                ["IF", "IF", "PS", "PS", "FF", "Jr"]
+                ["IF", "IF", "B", "PS", "FF", "Jr"]
             ],
             "F": [
                 ["PC", "MM", "FF", "PC", "PS", "Jr"],
@@ -260,34 +258,34 @@
         },
         "7": {
             "A": [
-                ["PC", "FF", "ST", "MM", "IF", "Jr"],
-                ["PC", "B", "Jr", "FF", "B", "IF"],
-                ["FF", "IF", "MM", "ST", "PS", "PC"]
+                ["PC", "B", "Jr", "IF", "IF", "PC"],
+                ["PC", "ST", "MM", "PS", "B", "ST"],
+                ["FF", "Jr", "PC", "MM", "FF", "PS"]
             ],
             "B": [
-                ["IF", "Jr", "MM", "PS", "B", "IF"],
-                ["FF", "B", "PC", "IF", "FF", "MM"],
-                ["FF", "PC", "Jr", "ST", "PS", "IF"]
+                ["PC", "FF", "Jr", "IF", "MM", "MM"],
+                ["B", "Jr", "IF", "PS", "B", "MM"],
+                ["PS", "PC", "PC", "MM", "FF", "PC"]
             ],
             "C": [
-                ["PC", "Jr", "IF", "PS", "MM", "ST"],
-                ["FF", "PC", "B", "IF", "MM", "PS"],
-                ["Jr", "FF", "PC", "ST", "IF", "FF"]
+                ["B", "FF", "Jr", "PC", "IF", "PC"],
+                ["B", "ST", "PC", "PS", "IF", "Jr"],
+                ["FF", "PC", "PS", "MM", "ST", "MM"]
             ],
             "D": [
-                ["Jr", "FF", "PC", "B", "IF", "FF"],
-                ["PC", "MM", "FF", "Jr", "ST", "PS"],
-                ["IF", "Jr", "MM", "IF", "PS", "MM"]
+                ["PC", "B", "PC", "PC", "MM", "MM"],
+                ["B", "MM", "IF", "MM", "IF", "Jr"],
+                ["FF", "PC", "PS", "FF", "Jr", "PS"]
             ],
             "E": [
-                ["PS", "PC", "IF", "ST", "PS", "FF"],
-                ["FF", "MM", "PS", "B", "IF", "PC"],
-                ["IF", "FF", "ST", "MM", "IF", "PC"]
+                ["B", "FF", "PC", "IF", "IF", "MM"],
+                ["PC", "MM", "MM", "MM", "B", "Jr"],
+                ["PS", "PC", "PS", "FF", "Jr", "PC"]
             ],
             "F": [
-                ["MM", "Jr", "MM", "PC", "FF", "PS"],
-                ["FF", "Jr", "B", "PS", "PC", "ST"],
-                ["IF", "PC", "MM", "Jr", "ST", "IF"]
+                ["B", "B", "PC", "IF", "MM", "PC"],
+                ["PC", "Jr", "MM", "PS", "IF", "MM"],
+                ["FF", "Jr", "PC", "MM", "FF", "PS"]
             ]
         },
         "8": {
