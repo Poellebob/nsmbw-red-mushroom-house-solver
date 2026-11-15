@@ -7,9 +7,8 @@ A small web tool that helps you solve the **Red Toad House "Power-up Panels"** p
 
 ## Combinations
 
-All possible combinations are listed [here](html/info.html).
+All possible combinations are listed [here](https://poellebob.github.io/nsmbw-red-mushroom-house-solver/html/info.html).
 
 ## Credits
 
-Created by [Poellebob](https://github.com/Poellebob).  
-Source code: [github.com/Poellebob/nsmbw-red-mushroom-house-solver](https://github.com/Poellebob/nsmbw-red-mushroom-house-solver)
+Created by [Poellebob](https://github.com/Poellebob).
